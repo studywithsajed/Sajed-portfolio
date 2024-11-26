@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
+<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white ">
   <!-- preloader -->
   
   <!-- /preloader -->
@@ -344,24 +344,16 @@
     <h2 class="text-center text-5xl capitalize ">Get in touch</h2>
     <p class="max-w-2xl mx-auto mt-5 mb-12">I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
   
-    <form action="" method="post" class="max-w-2xl mx-auto dark:text-black">
+    <form action="https://api.web3forms.com/submit" method="post" class="max-w-2xl mx-auto ">
+      <input type="hidden" name="access_key" value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759">
+      
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
-        <input type="text" required placeholder="Enter your Name" class="flex-1 capitalize p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
+        <input type="text" name="name" required placeholder="Enter your Name" class="flex-1 capitalize p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-black">
         
-        <input type="email" required placeholder="Enter your Email"
-          class="flex-1 p-3 capitalize outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
+        <input type="email" name="email" required placeholder="Enter your Email"
+          class="flex-1 p-3 capitalize outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-black">
       </div>
-      <textarea rows="6"  placeholder="Enter Your message" class="w-full p-4 capitalize outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"></textarea>
-      
-      <iframe
-        src="https://newassets.hcaptcha.com/captcha/v1/05c78a4/static/hcaptcha.html#frame=checkbox&amp;id=0ad0c02n3bg5&amp;host=elianajade.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=off&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=50b2fe65-b00b-4b9e-ad62-3ba471098be2&amp;theme=light&amp;origin=https%3A%2F%2Felianajade.com"
-        tabindex="0" frameborder="0" scrolling="no" title="Widget containing checkbox for hCaptcha security challenge"
-        data-hcaptcha-widget-id="6b4e5f04-bd5e-4746-b35c-873863661ac8" data-hcaptcha-response=""
-        style="pointer-events: auto; background-color: rgba(255, 255, 255, 0); width: 303px; height: 78px; overflow: hidden;">
-      </iframe>
-       
-      <textarea id="h-captcha-response-6b4e5f04-bd5e-4746-b35c-873863661ac8" name="h-captcha-response" style="display: none;"></textarea>
-      
+      <textarea rows="6" name="message"  placeholder="Enter Your message" class="w-full p-4 capitalize outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-black"></textarea>
       
         <button class="w-max gap-2 mt-10 mx-auto flex items-center justify-between bg-black/80 text-white capitalize font-semibold py-2 px-8 rounded-full hover:bg-black duration-500 dark:border dark:border-white dark:hover:bg-[#2a004a]">
         submit now
