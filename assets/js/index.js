@@ -17,7 +17,7 @@ function closeMenu() {
 
 /* Toggle  Bar End*/
 
-window.addEventListener('scroll','load', () => {
+window.addEventListener('scroll', () => {
   if (scrollY > 50) {
     navBar.classList.add('bg-white', 'bg-opacity-50', 'backdrop-blur-lg', 'shadow-sm');
     navLinks.classList.remove('bg-white', 'bg-opacity-50', 'shadow-sm');
@@ -33,13 +33,6 @@ window.addEventListener('scroll','load', () => {
 );
 
 // Hide the preloader after the page has fully loaded
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  preloader.style.opacity = '0'; // Fade-out effect
-  setTimeout(() => {
-    preloader.style.display = 'none'; // Remove from DOM
-  }, 500); // Matches fade-out transition
-});
 
 
 // Scroll to the top when the button is clicked
