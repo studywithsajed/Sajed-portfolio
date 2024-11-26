@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth ">
 
 <head>
   <meta charset="UTF-8">
@@ -10,17 +10,20 @@
 
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
   <!-- preloader -->
   
   <!-- /preloader -->
 
-  <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] ">
+  <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
     <img src="assets/img/header-bg.png" alt="header background">
   </div>
   <nav class="w-full fixed px-5 lg:px-5 xl:px-[8%] py-4 flex items-center justify-between z-50">
-    <img src="assets/img/file.png" alt="logo" class="w-28 cursor-pointer mr-14">
-    <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 ">
+    <img src="assets/img/file.png" alt="logo" class="w-28 cursor-pointer mr-14 dark:hidden">
+    
+    <img src="assets/img/file_white.png" alt="logo" class="w-28 cursor-pointer mr-14 hidden dark:block">
+   
+    <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent">
       <li><a class="uppercase hover:text-[#D91656] transition " href="#top">home</a></li>
       <li><a class="uppercase hover:text-[#D91656] transition " href="#about">about me</a></li>
       <li><a class="uppercase hover:text-[#D91656] transition " href="#services">services</a></li>
@@ -28,24 +31,29 @@
       <li><a class="uppercase hover:text-[#D91656] transition " href="#contact">contact me</a></li>
     </ul>
     <div class="flex items-center gap-4">
-      <button>
-        <img src="assets/img/moon.png" alt="moon icon" class="w-6">
+      <button onclick="toggleTheme()">
+        <img src="assets/img/moon.png" alt="moon icon" class="w-6 dark:hidden">
+        <img src="assets/img/sun-icon.png" alt="sun icon" class="w-6 hidden dark:block">
       </button>
+
       <a href="#contact"
-        class="uppercase hover:text-[#D91656] transition  hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 ">contact
-        <img src="assets/img/right-arrow(2).png" alt="right-arrow" class="w-3">
+        class="uppercase hover:text-[#D91656] transition  hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 dark:border-white/50">contact
+        <img src="assets/img/right-arrow(2).png" alt="right-arrow" class="w-3 dark:hidden">
+        <img src="assets/img/right-arrow.png" alt="right-arrow" class="w-3 hidden dark:block">
       </a>
 
       <button class="block md:hidden ml-3" onclick="openMenu()">
-        <img src="assets/img/menu-black.png" alt="menu bar" class="w-6">
+        <img src="assets/img/menu-black.png" alt="menu bar" class="w-6 dark:hidden">
+        <img src="assets/img/light=menu.png" alt="menu bar" class="w-6 hidden dark:block">
       </button>
     </div>
 
     <!-- mobile menu  -->
     <ul id="sideMenu"
-      class="flex md:hidden flex-col py-20 px-10 gap-4 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-700">
+      class="flex md:hidden flex-col py-20 px-10 gap-4 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-700 dark:text-white dark:bg-[#2a004a]">
       <div class="absolute right-6 top-7" onclick="closeMenu()">
-        <img src="assets/img/close-menu.png" alt="close-menu" class="w-4">
+        <img src="assets/img/close-menu.png" alt="close-menu" class="w-4 dark:hidden">
+        <img src="assets/img/cross-light.png" alt="close-menu" class="w-4 hidden dark:block">
       </div>
       <li><a class="uppercase hover:text-[#D91656] transition font-semibold" onclick="closeMenu()" href="#top">home</a></li>
       <li><a class="uppercase hover:text-[#D91656] transition font-semibold" onclick="closeMenu()" href="#about">about me</a></li>
@@ -66,14 +74,14 @@
 
     <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
       <a href="#contact"
-        class="capitalize text-white px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-wrap flex items-center gap-2">contact
+        class="capitalize text-white px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-wrap flex items-center gap-2 dark:border-transparent">contact
         me
         <img src="assets/img/right.png" alt="right arrow" class="w-4">
       </a>
       <a href="assets/img/SajedulIslamResume.pdf" download
-        class="capitalize  px-10 py-3 border border-gray-500 bg-white rounded-full  text-wrap flex items-center gap-2">
+        class="capitalize  px-10 py-3 border border-gray-500 bg-white rounded-full  text-wrap flex items-center gap-2 dark:text-black">
         my resume
-        <img src="assets/img/download1.png" alt="right arrow" class="w-4">
+        <img src="assets/img/download1.png" alt="right arrow" class="w-4 ">
       </a>
     </div>
   </div>
@@ -89,7 +97,7 @@
         <img src="assets/img/sajed.jpg" alt="user image" class="w-64 sm:w-80 rounded-3xl max-w-none">
         <div
           class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
-          <img src="assets/img/circular-text.png" alt="circular-text" class="w-full ">
+          <img src="assets/img/circular-text.png" alt="circular-text" class="w-full animate-spins">
           <img src="assets/img/dev-icon.png" alt="dev-icon"
             class="w-1/3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         </div>
@@ -103,26 +111,33 @@
 
         <ul class="grid grid-cols-1  sm:grid-cols-2 xl:grid-cols-3 gap-6 max-w-2xl">
           <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500
-              hover:shadow-[4px_4px_0_#000]">
-            <img src="assets/img/lang-dark.png" alt="language image" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700 ">Languages</h3>
-            <p class="text-gray-600 text-sm">HTML, CSS, JavaScript React Js, Next Js</p>
+              hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50 ">
+            <img src="assets/img/lang-dark.png" alt="language image" class="w-7 mt-3 dark:hidden">
+            <img src="assets/img/light-coder.png" alt="language image" class="w-7 mt-3 hidden dark:block">
+
+            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
+            <p class="text-gray-600 text-sm dark:text-white">HTML, CSS,Sass,Bootstrap 5,Tailwind, JavaScript React Js, Next Js</p>
+          </li>
+
+          <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500
+                        hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50 ">
+            <img src="assets/img/edu-dark.png" alt="education image" class=" dark:hidden mt-3 dark:hidden">
+            <img src="assets/img/education.png" alt="education image" class="hidden dark:block w-7 mt-3 hidden dark:block">
+          
+            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+            <p class="text-gray-600 text-sm dark:text-white">B.Tech in Computer Science</p>
           </li>
           <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500
-                          hover:shadow-[4px_4px_0_#000]">
-            <img src="assets/img/edu-dark.png" alt="language image" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700 ">Education</h3>
-            <p class="text-gray-600 text-sm">B.Tech in Computer Science</p>
-          </li>
-          <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500
-                          hover:shadow-[4px_4px_0_#000]">
-            <img src="assets/img/project-dark.png" alt="language image" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700 ">Projects</h3>
-            <p class="text-gray-600 text-sm">Built more than 5 projects</p>
+                        hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50 ">
+            <img src="assets/img/project-dark.png" alt="projects image" class="w-7 mt-3 dark:hidden">
+            <img src="assets/img/projects.png" alt="projects image" class="w-7 mt-3 hidden dark:block">
+          
+            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
+            <p class="text-gray-600 text-sm dark:text-white">Built more than 5 projects</p>
           </li>
         </ul>
 
-        <h4 class="capitalize my-6 text-gray-700">tools i use</h4>
+        <h4 class="capitalize my-6 text-gray-700 dark:text-white">tools i use</h4>
 
         <ul class="flex items-center gap-3 sm:gap-5">
           <li
@@ -161,37 +176,37 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
       <div
-        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50">
         <img src="assets/img/web-desgin.png" alt="web-desgin" class="w-7">
-        <h3 class="text-lg text-gray-700 my-4">Web desgin</h3>
-        <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
+        <h3 class="text-lg text-gray-700 my-4 dark:text-white">Web desgin</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white">Web development is the process of building, programming...</p>
         <a href="#" class="flex items-center text-sm mt-5 gap-2 text-black-700 capitalize">read more
           <img src="assets/img/right-dark.png" alt="right arrow" class="w-4">
         </a>
       </div>
       <div
-        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50">
         <img src="assets/img/android.png" alt="Mobile app" class="w-7">
-        <h3 class="text-lg text-gray-700 my-4">Mobile app</h3>
-        <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
+        <h3 class="text-lg text-gray-700 my-4 dark:text-white">Mobile app</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white">Web development is the process of building, programming...</p>
         <a href="#" class="flex items-center text-sm mt-5 gap-2 text-black-700 capitalize">read more
           <img src="assets/img/right-dark.png" alt="right arrow" class="w-4">
         </a>
       </div>
       <div
-        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50">
         <img src="assets/img/ui-ux.png" alt="UI/ UX design" class="w-7">
-        <h3 class="text-lg text-gray-700 my-4">UI/ UX design</h3>
-        <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
+        <h3 class="text-lg text-gray-700 my-4 dark:text-white">UI/ UX design</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white">Web development is the process of building, programming...</p>
         <a href="#" class="flex items-center text-sm mt-5 gap-2 text-black-700 capitalize">read more
           <img src="assets/img/right-dark.png" alt="right arrow" class="w-4">
         </a>
       </div>
       <div
-        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+        class="border cursor-pointer border-gray-400 rounded-lg px-8 py-12 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkhover/50">
         <img src="assets/img/graphic.png" alt="web-desgin" class="w-7">
-        <h3 class="text-lg text-gray-700 my-4">Graphics design</h3>
-        <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
+        <h3 class="text-lg text-gray-700 my-4 dark:text-white">Graphics design</h3>
+        <p class="text-sm text-gray-600 leading-5 dark:text-white">Web development is the process of building, programming...</p>
         <a href="#" class="flex items-center text-sm mt-5 gap-2 text-black-700 capitalize">read more
           <img src="assets/img/right-dark.png" alt="right arrow" class="w-4">
         </a>
@@ -213,7 +228,7 @@
         <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
            <div>
              <h2>
-              <a href="https://studywithsajed.github.io/ARAMINTAS/" target="_blank" class="capitalize font-semibold inline-block hover:text-red-500 duration-500">ARAMINTAS resturants</a>
+              <a href="https://studywithsajed.github.io/ARAMINTAS/" target="_blank" class="capitalize font-semibold inline-block hover:text-red-500 duration-500 dark:text-black">ARAMINTAS resturants</a>
              </h2>
            </div>
            <div class="rounded-full border border-black-700 w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
@@ -230,7 +245,7 @@
           <div>
             <h2>
               <a href="https://studywithsajed.github.io/Allaia-ecommers/" target="_blank"
-                class="capitalize font-semibold inline-block hover:text-red-500 duration-500">allaia-ecommers</a>
+                class="capitalize font-semibold inline-block hover:text-red-500 duration-500 dark:text-black">allaia-ecommers</a>
             </h2>
           </div>
           <div
@@ -248,7 +263,7 @@
           <div>
             <h2>
               <a href="https://studywithsajed.github.io/Novena-Health-Care/" target="_blank"
-                class="capitalize font-semibold inline-block hover:text-red-500 duration-500">Noveana Hospital</a>
+                class="capitalize font-semibold inline-block hover:text-red-500 duration-500 dark:text-black">Noveana Hospital</a>
             </h2>
           </div>
           <div
@@ -266,7 +281,7 @@
           <div>
             <h2>
               <a href="https://studywithsajed.github.io/Luxary-Hotel-sajed/" target="_blank"
-                class="capitalize font-semibold inline-block hover:text-red-500 duration-500">Luxary hotel</a>
+                class="capitalize font-semibold inline-block hover:text-red-500 duration-500 dark:text-black">Luxary hotel</a>
             </h2>
           </div>
           <div
@@ -284,7 +299,7 @@
           <div>
             <h2>
               <a href="https://studywithsajed.github.io/BBC-World-Sajed/" target="_blank"
-                class="capitalize font-semibold inline-block hover:text-red-500 duration-500">BBC News </a>
+                class="capitalize font-semibold inline-block hover:text-red-500 duration-500 dark:text-black">BBC News </a>
             </h2>
           </div>
           <div
@@ -302,7 +317,7 @@
           <div>
             <h2>
               <a href="https://studywithsajed.github.io/E-commers-sajed/" target="_blank"
-                class="capitalize font-semibold inline-block hover:text-red-500 duration-500">BD-Express</a>
+                class="capitalize font-semibold inline-block hover:text-red-500 duration-500 dark:text-black">BD-Express</a>
             </h2>
           </div>
           <div
@@ -315,9 +330,10 @@
       </div>
     </div>
       <a href="#"
-        class="capitalize w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-500 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#fcf4ff] duration-500">
+        class="capitalize w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-500 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#fcf4ff] duration-500 dark:text-white dark:hover:bg-[#2a004a]">
         Show more
-        <img src="assets/img/right-dark.png" alt="right-dark" class="w-4">
+        <img src="assets/img/right-dark.png" alt="right-dark" class="w-4 dark:hidden">
+        <img src="assets/img/right.png" alt="right-dark" class="w-4 hidden dark:block">
       </a>
   </div>
   <!-- /My Work  -->
@@ -328,7 +344,7 @@
     <h2 class="text-center text-5xl capitalize ">Get in touch</h2>
     <p class="max-w-2xl mx-auto mt-5 mb-12">I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
   
-    <form action="" method="post" class="max-w-2xl mx-auto ">
+    <form action="" method="post" class="max-w-2xl mx-auto dark:text-black">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
         <input type="text" required placeholder="Enter your Name" class="flex-1 capitalize p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
         
@@ -347,7 +363,7 @@
       <textarea id="h-captcha-response-6b4e5f04-bd5e-4746-b35c-873863661ac8" name="h-captcha-response" style="display: none;"></textarea>
       
       
-        <button class="w-max gap-2 mt-10 mx-auto flex items-center justify-between bg-black/80 text-white capitalize font-semibold py-2 px-8 rounded-full hover:bg-black duration-500">
+        <button class="w-max gap-2 mt-10 mx-auto flex items-center justify-between bg-black/80 text-white capitalize font-semibold py-2 px-8 rounded-full hover:bg-black duration-500 dark:border dark:border-white dark:hover:bg-[#2a004a]">
         submit now
         <img src="assets/img/right.png" alt="right" class="w-4 ">
        </button> 
@@ -359,16 +375,17 @@
 
 <footer class="mt-20">
   <div class="text-center">
-    <img src="assets/img/file.png" alt="sajed logo" class="w-36 mx-auto">
+    <img src="assets/img/file.png" alt="sajed logo" class="w-36 mx-auto dark:hidden">
+    <img src="assets/img/file_white.png" alt="sajed logo" class="w-36 mx-auto hidden dark:block">
     <a href="mailto:sajedislam019@gmail.com" class="capitalize w-max gap-3 mx-auto flex items-center hover:text-[#D91656] transition">
       <img src="assets/img/email-icon.png" alt="email-icon" class="w-6 ">
       sajedislam019@gmail.com
     </a>
   </div>
 
-  <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+  <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 sm:py-5 sm:px-5">
     <p class="capitalize">© 2024 sajedul islam. All rights reserved.</p>
-    <ul class="flex items-center justify-center gap-10 mt-4 sm:mt-0">
+    <ul class="flex items-center justify-center gap-10 sm:gap-6 mt-4 sm:mt-0">
       <li><a class="capitalize font-semibold hover:text-[#D91656] transition" href="#">instagram</a></li>
       <li><a class="capitalize font-semibold hover:text-[#D91656] transition" href="#">github</a></li>
       <li><a class="capitalize font-semibold hover:text-[#D91656] transition" href="#">linkdin</a></li>
